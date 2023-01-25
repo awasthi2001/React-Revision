@@ -12,10 +12,16 @@ let initState = {
 }
 export const SignUp = () => {
     const [details,setdetails] = useState(initState)
-    const {isRegistered} = useSelector(state=>state.Auth)
+    const {isRegistered,isAuth} = useSelector(state=>state.Auth)
+    
     console.log(isRegistered)
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    useEffect(()=>{
+      if(isAuth){
+          navigate('/')
+      }
+    },[isAuth])
     function HandleInput(e){
         let {name,value} = e.target;
         return setdetails({...details,[name]:value})
