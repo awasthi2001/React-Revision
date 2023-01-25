@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+}
+.Active{
+    color : white;
+    text-decoration: underline;
+}
+
+.isNotActive{
+    color: black;
+    text-decoration: none;
+}
+.Nav_Container{
+  background-color: cadetblue;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
