@@ -17,5 +17,8 @@ export function ProductReducer(state=initState,{type,payload}){
         case SET_DATA : {
            return {...state,data:payload,loading:false,error:false}           
         }
+        default :{
+            return state
+        }
     }
 }

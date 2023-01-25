@@ -16,10 +16,13 @@ export function AuthReducer(state=initState,{type,payload}){
             return {...state,error:true}
         }
         case SET_ISAUTH : {
-           return {...state,isAuth:true,loading:false,error:false}           
+           return {...state,isAuth:payload,loading:false,error:false}           
         }
         case SET_REGISTER : {
-            return {...state,isRegister:true,loading:false,error:false}
+            return {...state,isRegistered:payload,loading:false,error:false}
+        }
+        default : {
+            return state
         }
     }
 }
