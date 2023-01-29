@@ -6,7 +6,6 @@ import {set_login} from '../../Redux/Authentication/action.js'
 const Navbar = () => {
   let {isAuth} = useSelector(state=>state.Auth)
   const dispatch = useDispatch()
-  console.log(dispatch)
   function handleLogout(){
    dispatch(set_login(false))
   }
